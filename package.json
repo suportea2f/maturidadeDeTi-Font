@@ -65,5 +65,9 @@
   },
   "engines": {
     "node": "20.x"
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "postcss.config 2.js",
+  "author": "",
+  "license": "ISC"
 }
