@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: maturidade-ti-front
+    runtime: static
+    buildCommand: npm ci && npm run build
+    staticPublishPath: ./build
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: REACT_APP_API_URL
+        value: https://maturidade-ti-api.onrender.com/api/ # Altere para a URL real da sua API
+    headers:
+      - path: /*
+        name: Cache-Control
+        value: no-cache
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
+    autoDeploy: true 
